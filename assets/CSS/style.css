@@ -1,0 +1,54 @@
+/* 
+    ESTILOS DE PAGINA INDEX.HTML 
+*/
+.center {
+    text-align: center;
+}
+
+.container { 
+display: flex;
+flex-flow: row;
+justify-content: center;
+align-items: center;
+}
+
+#menu li {
+    display: inline;
+    padding: 30px;
+    font-size: 20px;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: blue;
+}
+
+#menu li a:hover {
+    color: brown;
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+.br-50 {
+    border-radius: 50px;
+}
+
+.wh-300 {
+    width: 300px;
+    height: 400px;
+}
+
+.tm-social {
+    width: 50px;
+    height: 50px;
+}
+
+.mb-50{
+    margin-bottom: 50px;
+}
+/*
+    ESTILOS DE PAGINA CONTATO.HTML 
+*/
+
