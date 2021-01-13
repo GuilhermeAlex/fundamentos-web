@@ -5,6 +5,10 @@
     text-align: center;
 }
 
+.justify {
+    text-align: justify;
+}
+
 .container { 
 display: flex;
 flex-flow: row;
@@ -51,4 +55,8 @@ align-items: center;
 /*
     ESTILOS DE PAGINA CONTATO.HTML 
 */
+
+.ml-50 {
+    margin-left: 80px;
+}
 
