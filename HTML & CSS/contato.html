@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt - br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="assets/css./style.css">
+</head>
+<body>
+    <ul id="menu">
+        <li> 
+            <a href= "index.html"> Home </a>
+        </li>
+        <li> 
+            <a href= "contato.html"> Contato </a>
+        </li>
+    </ul>
+    <h1 class="center">Entre em contato comigo</h1>
+
+    <div class="container mb-50">
+        
+        <div>
+            <form>
+                <label for="nome">Nome:</label> <br>
+                <input type="text" id="nome" onkeyup="validaNome()">
+                <div id="txtNome"></div>
+                <br>
+                <label for="email">E-mail:</label> <br>
+                <input type="email" id="email" onkeyup= "validaEmail()">
+                <div id="txtEmail"></div>
+                <br>
+                <label for="assunto">ASSUNTO:</label> <br>
+                   <textarea name="assunto" id="assunto" cols="60" rows="7" onkeyup= "validaAssunto()"></textarea>
+                   <div id="txtAssunto"></div>
+                <br>
+                <br>
+                <button onclick="enviar()">Enviar</button>
+                </form>
+            
+        </div>  
+
+        <div class="ml-50">
+           
+             <p>
+
+             R. Casarejos, 508 - Vila Mogilar
+            </p>
+            <p>
+             Mogi das Cruzes - SP
+            </p>
+            <p>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.402920280989!2d-46.196881185706836!3d-23.518006384704353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdd99b17cc222b%3A0xc021cad1def3a406!2sCanil%20BH%20Z%20(Shih%20Tzu)!5e0!3m2!1spt-BR!2sbr!4v1610392236782!5m2!1spt-BR!2sbr" 
+             width="500" 
+             height="350" 
+             frameborder="0" 
+             style="border:0;" 
+             allowfullscreen=""
+              aria-hidden="false"
+               tabindex="0" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa">
+              </iframe>
+      
+            </p>
+            
+         </form>
+        </div>
+
+    </div>
+
+    <hr>
+    <footer>
+
+        <div class="container">
+        <a href="https://www.linkedin.com/in/guilherme-alex-663a51143/" target="_blank">
+            <img class="tm-social p-30" src="assets/imagem/linkedin.png" alt="Logo do linkedin">
+        </a>
+
+            <a href="https://github.com/GuilhermeAlex" target="_blank">
+                <img class="tm-social p-30" src="assets/imagem/github-sign.png" alt="Logo do github">
+            </a>
+            
+            <a href="https://www.instagram.com/guilhermealex01/" target="_blank">
+                <img class="tm-social p-30" src="assets/imagem/instagram.png" alt="Logo do Instagram">
+            </a>
+            
+            <a href="https://www.facebook.com/guilherme.alex.712" target="_blank">
+                <img class="tm-social p-30" src="assets/imagem/facebook.png" alt="Logo do Facebook">
+            </a>
+            
+        </div>
+
+        <p class="center">
+            Direitos reservados: Guilherme Alex &copy;
+        </p>
+       
+    </footer>
+     <script src="assets/js/script.js"></script>
+</body>
+</html>
