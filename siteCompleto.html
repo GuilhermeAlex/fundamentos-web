@@ -31,19 +31,19 @@
               <a class="nav-link text-light" href="#">Home <span class="sr-only">(página atual)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Contato</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link text-light" href="#">Produtos</a>
             </li>
-      
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Tour Virtual</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Contato <span class="sr-only">(página atual)</span> </a>
+            </li>
             <li class="nav-item dropdown"> <!--Itens dentro de lista-->
               <a class="nav-link text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Redes Sociais <!--Ancora para o dropdwon, ou seja, quando clicar nesse botão vai abrir a lista--> 
               </a>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#">Sobre a Empresa</a>
-              </li>
+              
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="https://www.facebook.com/guilherme.alex.712">Facebook</a>
                 <a class="dropdown-item" href="https://www.instagram.com/guilhermealex01/">Instagram</a>
@@ -159,7 +159,7 @@
 
       <!--Texto e Video FInal-->
 
-      <!--Contato Inicio-->
+      <!-- Formulario Contato Inicio-->
 
       <div class="row mb-5">
         <div class="col-md-12">
@@ -172,12 +172,12 @@
         <div class="col-md-6">
           <form>
             <div class="form-group">
-              <label for="exampleFormControlInput1">Nome Completo</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome sobrenome">
+              <label for="nome">Nome </label> <br>
+              <input type="text" class="form-control" id="txtNome" onkeyup="validaNome()">
             </div>
             <div class="form-group">
-              <label for="exampleFormControlInput1">Número para contato</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="(XX) 9XXXX-XXXX">
+              <label for="telefone">Número para contato</label>
+              <input type="text" class="form-control" id="txtTelefone" onkeyup="validaTelefone()" placeholder="(DDD) + numero ">
             </div>
             <div class="form-group">
               <label for="exampleFormControlSelect1">Selecione o produto desejado</label>
@@ -197,24 +197,24 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Observações</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <label for="observaçoes">Observações</label>
+              <textarea class="form-control" id="txtObservaçoes" onkeyup="validaObservaçoes()" placeholder="Máximo 100 caracteres!" rows="3"></textarea> <div id="txtObservaçoes"></div>
             </div>
 
             <div class="form-group d-flex justify-content-center">
-              <button class="btn btn-outline-info">Enviar</button>
+              <button class="btn btn-outline-info" onclick="enviar()">Enviar</button>
             </div>
           </form>
         </div>
 
         <div class="col-md-6">
 
-          <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d117100.86533456064!2d-46.60933326759175!3d-23.482024173980022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d-23.467673299999998!2d-46.425618799999995!4m5!1s0x94cef577d28c72c3%3A0x92624a5e35992782!2sD%26G%20Planejados%20-%20Rua%20Manoel%20Quint%C3%A3o%20-%20Jardim%20Tranquilidade%2C%20Guarulhos%20-%20SP!3m2!1d-23.4705488!2d-46.554244399999995!5e0!3m2!1spt-BR!2sbr!4v1610726063583!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d117100.86533456064!2d-46.60933326759175!3d-23.482024173980022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d-23.467673299999998!2d-46.425618799999995!4m5!1s0x94cef577d28c72c3%3A0x92624a5e35992782!2sD%26G%20Planejados%20-%20Rua%20Manoel%20Quint%C3%A3o%20-%20Jardim%20Tranquilidade%2C%20Guarulhos%20-%20SP!3m2!1d-23.4705488!2d-46.554244399999995!5e0!3m2!1spt-BR!2sbr!4v1610726063583!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa"></iframe>
 
         </div>
 
       </div>
-      <!--Contato Final-->
+      <!-- Formulario Contato Final-->
       
       <!--FOOTER INICIO-->
       <hr>
@@ -259,6 +259,7 @@
       
 
     <!-- JavaScript (Opcional) -->
+    <script src="script.js"></script>
     
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
